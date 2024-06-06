@@ -31,7 +31,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/todo-list:${{ github.ref_name }}
+          tags: ghcr.io/kipetbest/todo-list:${{ github.ref_name }}
 
   deploy:
     needs: build
