@@ -16,16 +16,19 @@ function App() {
     let newTask = [taskTode, ...tasks];
     setTasks(newTask);
     setToDo("");
+    console.log("Task created")
   };
 
   const deleteTask = (id) => {
     let del = tasks.filter(e => e.id !== id);
     setTasks(del);
+    console.log("Tasks deleted");
   }
 
   const toggleTask = (id) => {
     let toggle = tasks.map(e => e.id === id ? { ...e, status: !e.status } : e);
     setTasks(toggle);
+    console.log("Tasks toggled");
   }
 
   const taskTodoList = tasks.map(e => <TaskTodo id={e.id} value={e.value} status={e.status} deleteTask={deleteTask} toggleTask={toggleTask} />)
